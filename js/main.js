@@ -33,6 +33,7 @@ function MainCtrl () {
 			if (filledCup === cup.id) cup.empty = false; 
 		});
 		mc.btnDisabled = true;
+		mc.gameOver = false;
 	};
 
 	mc.reset = function () {
@@ -40,9 +41,9 @@ function MainCtrl () {
 			cup.open = false;
 			cup.empty = true;
 			cup.choosed = false;
-			mc.gameOver = true;
 			cup.chance = '1/3';
 			cup.background = 'background_color_' + index;
+			mc.gameOver = false;
 		});
 		setTimeout(activate, 500);
 	};
