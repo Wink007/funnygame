@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<htm ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Funny games</title>
+	<link rel="stylesheet" type="text/css" href="../bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/6.0.0/normalize.min.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+
+<body style="user-select: none;">
+  <div class="container" ng-controller="mainCtrl as mc" ng-cloak>
+    <div class="row">
+      <div ng-show="mc.showText" class="arrow_box text-center"><i>Мы открыли пустую карту, сделайте ваш выбор еще раз</i></div>
+    </div>
+    <div class="row">
+    <h1 class="text"><span>Угадай где туз!</span></h1>
+      <div class="col-lg-9 col-md-9 col-xs-7">
+        <div class="wrapper">
+          <div class="cups">
+            <div ng-repeat="cup in mc.cups track by cup.id"
+                 ng-class="mc.showHints ? cup.background : ''">
+                  
+                  <div ng-class="mc.showHints && cup.choosed ? 'animation' : ''">
+                    <div ng-class="cup.open ? 'flipper animate_card' : 'flipper'" ng-click="mc.chooseCup(cup.id)">
+                      <div ng-class="cup.empty === true ? 'empty_card card' : 'front_card card'">
+                         
+                      </div>
+                      <div class="back_card card">
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="card_hints" ng-show="mc.showHints">
+                    <div class="hints">
+                      <p>{{cup.chance}}</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+          <div class="buttons">
+            <button type="button" 
+                    class="btn btn-success btn-lg btn-round hint hint--bottom hintButton"
+                    data-hint="Подсказка"
+                    ng-click="mc.showHints = !mc.showHints">
+              <i class="glyphicon glyphicon-question-sign hint_icon"></i>
+            </button>
+            <button type="button" 
+                    class="btn btn-success btn-lg btn-round refreshButton hint hint--bottom"
+                    data-hint="Еще раз" 
+                    ng-click="mc.reset()" 
+                    ng-disabled="mc.btnDisabled === true">
+              <i class="glyphicon glyphicon-refresh refresh_icon"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- <pre>
+          {{mc.cups}}
+        </pre> -->
+      </div>
+      <div class="col-lg-3 col-md-3 col-xs-5">
+        <div class="board">
+          <div class="title_board">
+            <div class="title_board_head">
+              <span class="text-center text2">Ваш результат</span>
+            </div>
+          </div>
+          <div class="title_count">
+            <div class="round" style="line-height: initial;">Round<p class="round_text">{{mc.count}}</p></div>
+            <div class="wins">Wins<p class="wins_text">{{mc.win}}</p></div>
+            <div class="percent">Percent<p class="percent_text">{{mc.count ? (100*mc.win/mc.count).toFixed(1) : 0}}%</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+	<script type="text/javascript" src="../angular.min.js"></script>
+	<script type="text/javascript" src="../jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="../jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
