@@ -28,11 +28,11 @@ function MainCtrl () {
 
 	function activate() {
 		const filledCup = Math.floor(Math.random()*3);
-		mc.gameOver = false;
 		mc.cups.map(function (cup) {
 			if (filledCup === cup.id) cup.empty = false; 
 		});
 		mc.btnDisabled = true;
+		mc.gameOver = false;
 	};
 
 	mc.reset = function () {
@@ -42,8 +42,9 @@ function MainCtrl () {
 			cup.choosed = false;
 			cup.chance = '1/3';
 			cup.background = 'background_color_' + index;
+			mc.gameOver = false;
 		});
-		setTimeout(activate, 1000);
+		setTimeout(activate, 500);
 	};
 	mc.chooseCup = function (id) {
 		if (mc.gameOver) {
