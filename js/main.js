@@ -40,10 +40,11 @@ function MainCtrl () {
 			cup.open = false;
 			cup.empty = true;
 			cup.choosed = false;
+			mc.gameOver = true;
 			cup.chance = '1/3';
 			cup.background = 'background_color_' + index;
 		});
-		setTimeout(activate, 1000);
+		setTimeout(activate, 500);
 	};
 	mc.chooseCup = function (id) {
 		if (mc.gameOver) {
