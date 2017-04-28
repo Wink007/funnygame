@@ -28,6 +28,7 @@ function MainCtrl () {
 
 	function activate() {
 		const filledCup = Math.floor(Math.random()*3);
+		mc.gameOver = false;
 		mc.cups.map(function (cup) {
 			if (filledCup === cup.id) cup.empty = false; 
 		});
