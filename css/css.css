@@ -85,7 +85,7 @@ h1 span {
 	.card_hints {
     	top: 70% !important;
     	margin-left: 13% !important;
-}
+	}
 }
 .title_board_head {
 	margin: 15px 20px;
@@ -203,29 +203,6 @@ h1 span {
 	transform: rotateY(180deg);
 }
 
-.table-game {
-	display: flex;
-	position: absolute;
-	width: 1170px;
-	background-color: #F4A460;
-	/*background-image: url('http://nachalo4ka.ru/wp-content/uploads/2014/08/fdret7y8.png');*/
-	border: 1px solid #CD853F;
-	height: 26px;
-	margin-top: -55px;
-	z-index: 4;
-	justify-content: center;
-	top: 81%;
-}
-.ball {
-	width: 40px;
-	height: 40px;
-	background-color: firebrick;
-	border-radius: 50%;
-	margin-left: 81px;
-    margin-top: 105px;
-    z-index: 0;
-    position: absolute;
-}
 .arrow_box {
 	width: 25%;
 	left: 27%;
@@ -499,4 +476,98 @@ h1 span {
 
 .hint--bottom:hover:after {
 	margin-top: 6px;
+}
+/*xs-screen*/
+@media screen and (max-width: 991px) {
+	.text {
+		margin-left: 15%;
+	}
+	.wrapper {
+		height: 430px;
+	}
+    .title_board {
+    	width: 124px;
+        top: -15%;
+    	left: 13%;
+        box-shadow: inset -4px 5px 14px -1px rgba(0,0,0,0.47), 0px 2px 11px 0px rgba(0,0,0,0.48);
+    }
+    .title_board_head {
+	    /* margin: 15px 20px; */
+	    font-size: 13px;
+	    font-weight: bold;
+	    text-align: center;
+	    margin-top: 10px;
+	}
+    .arrow_box {
+    	width: 45% !important;
+    	left: 18% !important;;
+    	top: -2%;
+    	font-size: 17px;
+    	padding: 9px !important;
+	}
+	.card_hints {
+    	top: 70% !important;
+    	margin-left: 13% !important;
+	}
+	.buttons {
+		top: 81%;
+	    left: 10%;
+	}
+	.refreshButton {
+		margin-right: 20%;
+	}
+	.cups {
+		display: flex;
+	    flex-direction: row;
+	    justify-content: space-around;
+	    /*align-items: stretch;*/
+	    z-index: 2;
+	    margin-top: 12%;
+	}
+	.card {
+		backface-visibility: hidden;
+	  	position: absolute;
+	  	top: 0;
+	  	left: 0;
+	  	width: 157px;
+		height: 171px;
+		display: flex;
+	}
+	.flipper {
+		min-width: 167px;
+	}
+	.board {
+		width: 205px;
+	}
+	.background_color_0, .background_color_1, .background_color_2, .background_animate{
+		width: 165px;
+		height: 280px;
+	}
+	.background_color_0 {
+		background-color: rgba(199, 21, 133,0.5);
+		margin-top: -20px;
+	    padding-top: 21px;
+		/*margin-left: 4px;*/
+		/*border-radius: 40px;*/
+		
+	}
+	.background_color_1 {
+		/*background-color: rgba(255, 140, 0,0.5);*/
+		margin-top: -20px;
+	    padding-top: 21px;
+		/*margin-left: 4px;*/
+		/*border-radius: 40px;*/
+		z-index: 2;
+	}
+	.background_color_2 {
+		background-color: rgba(32, 178, 170,0.5);
+		margin-top: -20px;
+	    padding-top: 21px;
+		/*margin-left: 4px;*/
+		/*border-radius: 40px;*/
+	}
+	.animation {
+		height: 222px;
+		width: 162px;
+	}
 }
