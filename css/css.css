@@ -91,7 +91,9 @@ h1 span {
 	margin: 15px 20px;
     color: chocolate;
     font-size: 14px;
+    -moz-font-size: 13px;
     font-weight: bold;
+    font-size-adjust:0.5;
 	
 }
 .text2 {
