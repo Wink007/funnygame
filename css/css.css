@@ -576,13 +576,14 @@ h1 span {
 }
 @media screen and (max-device-width: 768px) {
 	.resize-text {
-		margin-top: 5%;
-		font-family: cursive;
+		opacity: 0.8;
+		margin-top: 9%;
+		font-weight: bold;
 		position: absolute;
 		color: white;
 		width: 150px;
-		font-size: 23px;
-		left: 46%;
+		font-size: 22px;
+		left: 47%;
 	}
 	.resize {
 		background-image: url('../img/smartphone.png');
@@ -590,11 +591,10 @@ h1 span {
 		background-position: 50% 50%;
 		background-size: cover;
 		position: absolute;
-		left: 30%;
-		margin-top: 4%;
+		left: 29%;
+		margin-top: 9%;
 		width: 100px;
 		height: 180px;
-		border: 1px solid white;
 		border-radius: 5px;
 		animation: rotate 3s 3;
 	}
