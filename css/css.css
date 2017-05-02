@@ -479,6 +479,7 @@ h1 span {
 .hint--bottom:hover:after {
 	margin-top: 6px;
 }
+
 /*xs-screen*/
 @media screen and (max-width: 991px) {
 	.text {
@@ -571,5 +572,36 @@ h1 span {
 	.animation {
 		height: 222px;
 		width: 162px;
+	}
+}
+@media screen and (max-device-width: 768px) {
+	.resize-text {
+		margin-top: 5%;
+		font-family: cursive;
+		position: absolute;
+		color: white;
+		width: 150px;
+		font-size: 23px;
+		left: 46%;
+	}
+	.resize {
+		background-image: url('../img/smartphone.png');
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+		background-size: cover;
+		position: absolute;
+		left: 30%;
+		margin-top: 4%;
+		width: 100px;
+		height: 180px;
+		border: 1px solid white;
+		border-radius: 5px;
+		animation: rotate 3s 3;
+	}
+	@keyframes rotate {
+		50% {
+			opacity: 0.7;
+			transform: rotate(-90deg);
+		}
 	}
 }
