@@ -576,33 +576,32 @@ h1 span {
 }
 @media screen and (max-device-width: 500px) {
 	.resize-text {
-	    margin-top: 9%;
 	    opacity: 0.8;
 	    font-weight: bold;
 	    color: white;
 	    width: 380px;
 	    font-size: 25px;
-	    margin-left: 15%;
+	    margin: 9% auto;
 	    text-align: center;
 	}
 	.resize-text h2 {
 		font-size: 39px;
-    	font-weight: bold;
-    	font-family: sans-serif;
-    	margin-bottom: 6%;
-    	color: bisque;
+	    font-weight: bold;
+	    font-family: sans-serif;
+	    margin-bottom: 6%;
+	    color: bisque;
 	}
 	.resize-text p {
-		font-size: 30px;
+		font-size: 33px;
     	font-weight: 100;
+    	color: burlywood;
 	}
 	.resize {
 		background-image: url(../img/rotate2.png);
 	    background-repeat: no-repeat;
 	    background-position: 50% 50%;
 	    background-size: cover;
-	    margin-top: 20%;
-	    margin-left: 15%;
+	    margin: 20% auto 0 auto;
 	    width: 380px;
 	    height: 250px;
 	    border-radius: 5px;
