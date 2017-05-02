@@ -574,7 +574,7 @@ h1 span {
 		width: 162px;
 	}
 }
-@media screen and (max-device-width: 768px) {
+@media screen and (max-device-width: 500px) {
 	.resize-text {
 		opacity: 0.8;
 		margin-top: 9%;
