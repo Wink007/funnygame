@@ -580,10 +580,15 @@ h1 span {
 	    opacity: 0.8;
 	    font-weight: bold;
 	    color: white;
-	    width: 300px;
+	    width: 328px;
 	    font-size: 25px;
 	    margin-left: 23%;
 	    text-align: center;
+	}
+	.resize-text h2 {
+		font-size: 34px;
+	    font-weight: bold;
+	    font-family: sans-serif;
 	}
 	.resize {
 		background-image: url(../img/rotate2.png);
@@ -601,5 +606,10 @@ h1 span {
 		50% {
 			background-image: url('../img/rotate1.png');
 		}
+	}
+}
+@media screen and (min-device-width: 501px) {
+	.rotate-device {
+		display: none;
 	}
 }
