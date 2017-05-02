@@ -577,11 +577,12 @@ h1 span {
 @media screen and (max-device-width: 768px) {
 	.resize-text {
 		margin-top: 5%;
-		font-family: cursive;
+		font-style: italic;
+		font-weight: bold;
 		position: absolute;
 		color: white;
 		width: 150px;
-		font-size: 23px;
+		font-size: 22px;
 		left: 46%;
 	}
 	.resize {
@@ -594,7 +595,6 @@ h1 span {
 		margin-top: 4%;
 		width: 100px;
 		height: 180px;
-		border: 1px solid white;
 		border-radius: 5px;
 		animation: rotate 3s 3;
 	}
