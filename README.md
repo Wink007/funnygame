@@ -1,2 +1,1 @@
-# funnygames.github.io
-# funnygames.github.io
+[Funny Game](https://wink007.github.io/funnygame/)
